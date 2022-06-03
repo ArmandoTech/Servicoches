@@ -1,4 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
+<<<<<<< HEAD
 <html>
 <!--  46:37  -->
 <head>
@@ -209,6 +211,37 @@
 							<span class="fa fa-star"></span>
 						</div>
 						<h2>Building Your Trust <span>Since 1968.</span></h2>
+=======
+{% block content %}
+<html>
+<!--Main Slider-->
+<section class="main-slider">
+	
+	<div class="main-slider-carousel owl-carousel owl-theme">
+		
+		<div class="slide" style="background-image:url({% static 'services/images/main-slider/image-1.jpg)' %}">
+			<div class="auto-container">
+				<div class="content">
+					<div class="rating">
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+					</div>
+					<h2>Building Your Trust <span>Since 1968.</span></h2>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slide" style="background-image:url({% static 'services/images/main-slider/image-2.jpg' %})">
+			<div class="auto-container">
+				<div class="content">
+					<div class="rating">
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+>>>>>>> db8c77807314eb2a4c26ed842dfa0224a0ad6be5
 					</div>
 					<h2>Building Your Trust <span>Since 1968.</span></h2>
 				</div>
@@ -524,6 +557,7 @@
 				<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
 					<div class="image">
 						<a href="team.html"><img src="{% static 'services/images/resource/team-1.jpg' %}" alt="" /></a>
+<<<<<<< HEAD
 					</div>
 					<div class="lower-content">
 						<h3><a href="team.html">Jacob Reyes</a></h3>
@@ -531,6 +565,15 @@
 						<div class="text">This is Photoshop's version  of Lorem]psukroin nibh vel velit auctor aliquet.</div>
 						<a href="team.html" class="theme-btn btn-style-two">read more</a>
 					</div>
+=======
+					</div>
+					<div class="lower-content">
+						<h3><a href="team.html">Jacob Reyes</a></h3>
+						<div class="designation">Master Technician</div>
+						<div class="text">This is Photoshop's version  of Lorem]psukroin nibh vel velit auctor aliquet.</div>
+						<a href="team.html" class="theme-btn btn-style-two">read more</a>
+					</div>
+>>>>>>> db8c77807314eb2a4c26ed842dfa0224a0ad6be5
 				</div>
 			</div>
 			
@@ -595,3 +638,4 @@
 
 <!--  51:42  -->
 </html>
+{% endblock  %}

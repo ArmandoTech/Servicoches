@@ -1,4 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <!-- contact59:55  -->
@@ -9,6 +11,9 @@
 <link href="{% static 'services/css/bootstrap.css' %}" rel="stylesheet">
 <link href="{% static 'services/css/style.css' %}" rel="stylesheet">
 <link href="{% static 'services/css/responsive.css' %}" rel="stylesheet">
+=======
+{% block content %}
+>>>>>>> db8c77807314eb2a4c26ed842dfa0224a0ad6be5
 
 <!--Page Title-->
 <section class="page-title" style="background-image:url({% static 'services/images/background/6.jpg' %})">
@@ -26,6 +31,7 @@
 			<h2>Get in touch!</h2>
 		</div>
 		
+<<<<<<< HEAD
     	<!--Header-Upper-->
         <div class="header-upper">
         	<div class="auto-container">
@@ -80,6 +86,14 @@
                    <!--Option Box-->
 					<div class="btn-box">
 						<a href="#" class="theme-btn btn-style-one">Make a Appoinment</a>
+=======
+		<!--Contact Form-->
+		<div class="contact-form">
+			<form method="post" action="http://wpkoder.com/html/vetura/sendemail.php" id="contact-form">
+				<div class="row clearfix">
+					<div class="form-group col-lg-4 col-md-6 col-sm-12">
+						<input type="text" name="name" value="" placeholder="Name" required>
+>>>>>>> db8c77807314eb2a4c26ed842dfa0224a0ad6be5
 					</div>
 					
 					<div class="form-group col-lg-4 col-md-6 col-sm-12">
@@ -126,3 +140,7 @@
 	</div>
 </section>
 <!-- End Map Section -->
+<<<<<<< HEAD
+=======
+{% endblock  %}
+>>>>>>> db8c77807314eb2a4c26ed842dfa0224a0ad6be5
