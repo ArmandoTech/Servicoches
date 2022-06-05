@@ -39,7 +39,7 @@
                     <!--Top Left-->
                     <div class="top-left">
                     	<ul class="links clearfix">
-                        	<li><a href="#"><span class="icon fa fa-phone"></span>  Call us 1-555-133-447</a></li>
+                        	<li><a href="#"><span class="icon fa fa-phone"></span>(7) 6713491</a></li>
                             <li><a href="#"><span class="icon fa fa-envelope-o"></span>contact@mechanic.com</a></li>
                         </ul>
                     </div>
@@ -47,16 +47,7 @@
                     <!--Top Right-->
                     <div class="top-right clearfix">
                     	<ul class="links">
-                        	<li><a href="#">Find us on map </a></li>
-                            <!--Language-->
-                            <li class="language dropdown"><a class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">English</a>
-                                <ul class="dropdown-menu style-one" aria-labelledby="dropdownMenu2">
-                                    <li><a href="#">English</a></li>
-                                    <li><a href="#">German</a></li>
-                                    <li><a href="#">Arabic</a></li>
-                                    <li><a href="#">Hindi</a></li>
-                                </ul>
-                            </li>
+                        	<li><a href="https://www.google.com/maps/place/Cl.+17+%2315-40,+Bucaramanga,+Santander/@7.1301535,-73.1318131,17z/data=!3m1!4b1!4m5!3m4!1s0x8e6815798daf8721:0xd2fc3c7f8c03f762!8m2!3d7.1301535!4d-73.1296244?hl=es">UBICACIÓN </a></li>
                         </ul>  
 						<ul class="social-icon-one">
 							<li><a href="#" class="fa fa-twitter"></a></li>
@@ -77,7 +68,7 @@
             	<div class="header-upper-inner clearfix">
                 	
                 	<div class="pull-left logo-box">
-                    	<div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
+                    	<div class="logo"><a href="index.html"><img src="{% static 'services/images/logo-servicoches.jpg' %}" alt="" title=""></a></div>
                     </div>
                    	
                    	<div class="nav-outer clearfix">
@@ -124,7 +115,7 @@
 					</div>
                    <!--Option Box-->
 					<div class="btn-box">
-						<a href="#" class="theme-btn btn-style-one">Make a Appoinment</a>
+						<a href="contact.html" class="theme-btn btn-style-one">AGENDAR TURNO</a>
 					</div>
                 </div>
             </div>
@@ -136,7 +127,7 @@
         	<div class="auto-container clearfix">
             	<!--Logo-->
             	<div class="logo pull-left">
-                	<a href="index.html" class="img-responsive"><img src="images/logo-small.png" alt="" title=""></a>
+                	<a href="index.html" class="img-responsive"><img src="images/logo-servicoches.jpg" alt="" title=""></a>
                 </div>
                 
                 <!--Right Col-->
@@ -188,8 +179,8 @@
 <!--Page Title-->
 <section class="page-title" style="background-image:url({% static 'services/images/background/6.jpg' %})">
 	<div class="auto-container">
-		<h1>Contact us</h1>
-		<div class="text">If It Runs On Diesel…We’ll Fix It!</div>
+		<h1>AGENDA TU CITA</h1>
+		<div class="text">EN LAS MEJORES MANOS</div>
 	</div>
 </section>
 <!--End Page Title-->
@@ -201,20 +192,21 @@
 			<h2>Get in touch!</h2>
 		</div>
 		
+		{% csrf_token %}
 		<!--Contact Form-->
 		<div class="contact-form">
 			<form method="post" action="http://wpkoder.com/html/vetura/sendemail.php" id="contact-form">
 				<div class="row clearfix">
 					<div class="form-group col-lg-4 col-md-6 col-sm-12">
-						<input type="text" name="name" value="" placeholder="Name" required>
+						<input type="text" name="car" value="" placeholder="Placas del vehículo y modelo" required>
 					</div>
 					
 					<div class="form-group col-lg-4 col-md-6 col-sm-12">
-						<input type="text" name="email" value="" placeholder="Email" required>
+						<input type="text" name="email" value="" placeholder="Correo electrónico" required>
 					</div>
 					
 					<div class="form-group col-lg-4 col-md-6 col-sm-12">
-						<input type="text" name="website" value="" placeholder="Website" required>
+						<input type="text" name="cellphone" value="" placeholder="Celular" required>
 					</div>
 					
 					<div class="form-group col-lg-12 col-md-12 col-sm-12">
