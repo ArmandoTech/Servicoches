@@ -40,7 +40,7 @@
                     <div class="top-left">
                     	<ul class="links clearfix">
                         	<li><a href="#"><span class="icon fa fa-phone"></span>(7) 6713491</a></li>
-                            <li><a href="#"><span class="icon fa fa-envelope-o"></span>contact@mechanic.com</a></li>
+                            <li><a href="#"><span class="icon fa fa-envelope-o"></span>info.servicoches@gmail.com</a></li>
                         </ul>
                     </div>
                     
@@ -91,7 +91,7 @@
 					</div>
                    <!--Option Box-->
 					<div class="btn-box">
-						<a href="contact.html" class="theme-btn btn-style-one">AGENDAR TURNO</a>
+						<a href="contact.html" class="theme-btn btn-style-one">¿Tienes dudas?</a>
 					</div>
                 </div>
             </div>
@@ -142,20 +142,30 @@
 </section>
 <!--End Page Title-->
 
+<!--Thanks for the email-->
+{% if message_name %}
+<br/><br/><br/><br/>
+<center>
+	<h2>Tu mensaje ha sido enviado, nos comunicaremos pronto contigo. </h2>
+</center>
+<br/><br/><br/><br/>
+
+{% else %}
 <!--Contact Form Section-->
 <section class="contact-form-section">
 	<div class="auto-container">
 		<div class="sec-title centered">
-			<h2>¡Ponte en contácto!</h2>
+			<h2>¡Ponte en contacto!</h2>
 		</div>
 		
 		{% csrf_token %}
 		<!--Contact Form-->
-		<div class="contact-form">
-			<form method="post" action="http://wpkoder.com/html/vetura/sendemail.php" id="contact-form">
+		<div class="contact-form"> 
+			<form action="{% url 'contact' %}" method="post">
+			{% csrf_token %}
 				<div class="row clearfix">
 					<div class="form-group col-lg-4 col-md-6 col-sm-12">
-						<input type="text" name="car" value="" placeholder="Nombre" required>
+						<input type="text" name="name" value="" placeholder="Nombre" required>
 					</div>
 					
 					<div class="form-group col-lg-4 col-md-6 col-sm-12">
@@ -176,10 +186,12 @@
 				</div>
 			</form>
 		</div>
+	
 		
 	</div>
 </section>
 <!--End Contact Form Section-->
+{% endif %}
 
 <!--Main Footer-->
 <footer class="main-footer">
