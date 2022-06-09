@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.utils.html import escape
 
 def index(request):
     return render(request, 'index.html', {})
@@ -14,7 +15,7 @@ def contact(request):
         message_content=request.POST['message']
         message_email=request.POST['email']
         
-        final_message=f' MENSAJE: {message_content}, CELULAR: {message_cellphone}'
+        final_message=f' MENSAJE: {escape(message_content)}, CELULAR: {escape(message_cellphone)}, CORREO: {escape(message_email)}'
 
         send_mail('NUEVO MENSAJE DE: ' + message_name,
         final_message,
