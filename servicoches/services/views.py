@@ -5,12 +5,9 @@ from django.utils.html import escape
 def index(request):
     return render(request, 'index.html', {})
 
-def about(request):
-    return render(request, 'about.html', {})
-
 def contact(request):
     if request.method=="POST":
-        message_name="Deseo información"
+        message_name=request.POST['name']
         message_cellphone=request.POST['cellphone']
         message_content=request.POST['message']
         message_email=request.POST['email']
@@ -27,9 +24,6 @@ def contact(request):
 
     else:
         return render(request, 'contact.html', {})
-
-def gallery(request):
-    return render(request, 'gallery.html', {})
 
 def services(request):
     return render(request, 'services.html', {})

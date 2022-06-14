@@ -835,6 +835,13 @@
 }
 
 @media only screen and (max-width: 479px) {
+
+	.main-slider .slide{
+		background-size: Cover;
+		background-position: center center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+	}
 	
 	.main-header .header-upper .logo-box{
 		padding-top:12px;
